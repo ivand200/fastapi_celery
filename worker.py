@@ -49,8 +49,6 @@ def send_notifictions():
     logger.info(f"Done send notifications for failed tasks")
 
 
-
-
 celery.conf.beat_schedule = {
     "every-1-minute": {
         "task": "worker.send_notifictions",
